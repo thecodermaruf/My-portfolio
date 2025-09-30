@@ -560,21 +560,12 @@ margin: 2rem 0 2.5rem;
     transition: all ease-in-out .3s;
 }
 
-.skills .resume-list .resume-item:hover {
-    fill: var(--text-green);
+.skills .resume-list .resume-item i {
+    color: var(--b-text);
+} 
+
+.skills .resume-list .resume-item:hover i {
     color: var(--text-green);
-}
-
-svg path {
-    transition: all ease-in-out .3s;
-}
-
-.skills .resume-list .resume-item:hover svg path {
-    fill: var(--text-green);
-}
-
-.skills .resume-list .resume-item:hover .svg path {
-    fill: var(--text-green);
 }
 
 .skills .resume-list .resume-item span {
