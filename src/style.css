@@ -40,7 +40,7 @@ a {
 li {
     list-style: none;
 }
-/*-------------------- besice ---------------------------------*/
+/*-------------------- basic ---------------------------------*/
 
 
 /* -------------------- header  -------------------- */
@@ -146,6 +146,7 @@ section {
     visibility: hidden;
     opacity: 0;
     overflow: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 /* section.active {
@@ -426,9 +427,6 @@ section.active {
 .resume-box p {
     font-size: 1.6rem;
 }
-.resume-detail .padd {
-    padding-bottom: 20px;
-}
 
 .about p {
     padding-bottom: 24px;
@@ -493,7 +491,6 @@ margin: 2rem 0 2.5rem;
     width: .7rem;
 }
 .resume-list::-webkit-scrollbar-thumb {
-    background: transparent;
     border-radius: 1rem;
     background: var(--text-green); 
 }
@@ -562,11 +559,12 @@ margin: 2rem 0 2.5rem;
 
 .skills .resume-list .resume-item i {
     color: var(--b-text);
-} 
+}
 
 .skills .resume-list .resume-item:hover i {
     color: var(--text-green);
 }
+
 
 .skills .resume-list .resume-item span {
     position: absolute;
@@ -854,9 +852,17 @@ margin: 2rem 0 2.5rem;
 /*--------------------------- contact section end ---------------*/
 
 /*-------------------------- breakpoints ---------------------------*/
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     html {
         font-size: 55%;
+        scroll-behavior: smooth;
     }
 }
 
